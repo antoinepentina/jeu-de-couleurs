@@ -35,3 +35,5 @@ second_button.pack(side=LEFT)
 label_text.pack()
 racine.after(1000,incremente)
 racine.mainloop()
+lalalalalalalalala
+lilili
