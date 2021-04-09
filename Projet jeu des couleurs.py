@@ -17,11 +17,11 @@ label_text = Label(racine, text="Tapez la couleur des mots et pas le texte des m
 def incremente():
     "Incrémente le compteur à chaque seconde"
     global compteur
-    compteur += 1
+    compteur -=1
     compteur_lbl['text'] = str(compteur)
     racine.after(1000, incremente)
 
-compteur = 0
+compteur = 30
 compteur_lbl = tk.Label(racine, text=str(compteur), font=("", 16))
 compteur_lbl.pack()
 
@@ -38,8 +38,8 @@ eighth_button = Button(racine, text='Orange', bg='chocolate1')
 ninth_button = Button(racine, text='Blanc', bg='white')
 #Affichage
 label_text.pack()
-first_button.pack(side=RIGHT, pady=20)
-second_button.pack(side=LEFT)
+first_button.pack(side =RIGHT, pady =50)
+second_button.pack(side =LEFT, pady =50)
 third_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
 fourth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
 fifth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
