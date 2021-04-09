@@ -27,15 +27,25 @@ compteur_lbl.pack()
 
 
 #ajout des boutons
-first_button = Button(racine, text="Démarrer")
+first_button = Button(racine, text="Démarrer", command=incremente)
 second_button = Button(racine, text="réinitialiser")
+third_button = Button(racine, text='Bleu', bg='deep sky blue')
+fourth_button = Button(racine, text='Rouge', bg='firebrick1')
+fifth_button = Button(racine, text='Vert', bg='spring green2')
+sixth_button = Button(racine, text='Jaune', bg='Gold')
+seventh_button = Button(racine, text='Rose', bg='DeepPink2')
+eighth_button = Button(racine, text='Orange', bg='chocolate1')
+ninth_button = Button(racine, text='Blanc', bg='white')
 #Affichage
-first_button.pack(side=RIGHT)
-second_button.pack(side=LEFT)
 label_text.pack()
+first_button.pack(side=RIGHT, pady=20)
+second_button.pack(side=LEFT)
+third_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+fourth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+fifth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+sixth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+seventh_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+eighth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
+ninth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
 racine.after(1000,incremente)
 racine.mainloop()
-lalalalalalalalala
-lilili
-lololo
-lalaal
