@@ -45,7 +45,7 @@ label_text = Label(canvas, text="Tapez la couleur des mots et pas le texte des m
 label_score = Label(canvas, text="Score :", bg ="azure2", font=("Cassia", 18))
 
 class ButtonColor(Button):
-    pass
+    pass 
 
 #ajout des boutons
 first_button = Button(canvas, text="Démarrer")
@@ -59,7 +59,6 @@ eighth_button = Button(canvas, text='Orange', bg='chocolate1')
 ninth_button = Button(canvas, text='Blanc', bg='white')
 
 #Affichage
-
 label_text.pack()
 label_score.pack()
 first_button.pack(side =LEFT , pady =50)
