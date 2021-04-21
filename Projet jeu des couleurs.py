@@ -48,7 +48,7 @@ class ButtonColor(Button):
     pass 
 
 #ajout des boutons
-first_button = Button(canvas, text="Démarrer")
+first_button = Button(canvas, text="Démarrer", command=incremente)
 second_button = Button(canvas, text="réinitialiser")
 third_button = Button(canvas, text='Bleu', bg='deep sky blue')
 fourth_button = Button(canvas, text='Rouge', bg='firebrick1')
@@ -72,5 +72,5 @@ eighth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
 ninth_button.pack(side=LEFT, padx=15, ipadx=20, ipady=10)
 canvas.pack()
 
-canvas.after(1000,incremente)
+
 racine.mainloop()
