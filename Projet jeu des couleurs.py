@@ -7,14 +7,17 @@ from tkinter import *
 import tkinter as tk
 import random as rd
 import time
+from turtle import *
+
 
 racine = Tk()
 racine.title("Jeu de couleurs")
 racine.geometry("900x300")
 racine.config(background="azure2")
 canvas=Canvas(racine, width=300, height= 900, bg="azure2")
-#ajout d'un premier texte 
-#label_text = Label(racine, text="Tapez la couleur des mots et pas le texte des mots !", bg="azure2", font=("Cassia", 20))
+canvas2=Canvas(racine, width=300, height= 900, bg="azure2")
+
+
 
 #ajout des fonctions
 def incremente():
@@ -36,10 +39,10 @@ compteur_lbl.pack()
 #Apparition du mot du milieu
 couleurs = ['deep sky blue','firebrick1','spring green2','Gold','DeepPink2','chocolate1','white']
 mots = ['Bleu','Rouge','Vert','Jaune','Rose','Orange','Blanc','Violet','Noir','Marron','Gris','Beige']
-
 label_title = Label(canvas, text=rd.choice(mots), font=("Cassia",40), fg=rd.choice(couleurs), bg='azure2')
 label_title.pack()
 
+    
 
 label_text = Label(canvas, text="Tapez la couleur des mots et pas le texte des mots !", bg="azure2", font=("Cassia", 20))
 label_score = Label(canvas, text="Score :", bg ="azure2", font=("Cassia", 18))
@@ -50,13 +53,16 @@ class ButtonColor(Button):
 #ajout des boutons
 first_button = Button(canvas, text="Démarrer", command=incremente)
 second_button = Button(canvas, text="réinitialiser")
-third_button = Button(canvas, text='Bleu', bg='deep sky blue')
-fourth_button = Button(canvas, text='Rouge', bg='firebrick1')
-fifth_button = Button(canvas, text='Vert', bg='spring green2')
-sixth_button = Button(canvas, text='Jaune', bg='Gold')
-seventh_button = Button(canvas, text='Rose', bg='DeepPink2')
-eighth_button = Button(canvas, text='Orange', bg='chocolate1')
-ninth_button = Button(canvas, text='Blanc', bg='white')
+third_button = Button(canvas, text='Bleu', bg=couleurs[0])
+fourth_button = Button(canvas, text='Rouge', bg=couleurs[1])
+fifth_button = Button(canvas, text='Vert', bg=couleurs[2])
+sixth_button = Button(canvas, text='Jaune', bg=couleurs[3])
+seventh_button = Button(canvas, text='Rose', bg=couleurs[4])
+eighth_button = Button(canvas, text='Orange', bg=couleurs[5])
+ninth_button = Button(canvas, text='Blanc', bg=couleurs[6])
+
+onclick(third_button)
+    del label_title
 
 #Affichage
 label_text.pack()
