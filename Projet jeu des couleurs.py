@@ -17,7 +17,8 @@ racine.config(background="azure2")
 canvas=Canvas(racine, width=300, height= 900, bg="azure2")
 canvas2=Canvas(racine, width=300, height= 900, bg="azure2")
 
-
+def réinitialiser():
+    pass
 
 #ajout des fonctions
 def incremente():
@@ -47,22 +48,26 @@ label_title.pack()
 label_text = Label(canvas, text="Tapez la couleur des mots et pas le texte des mots !", bg="azure2", font=("Cassia", 20))
 label_score = Label(canvas, text="Score :", bg ="azure2", font=("Cassia", 18))
 
-class ButtonColor(Button):
-    pass 
+
+def amelie(str):
+    global label_title
+    label_title["text"]= str
+    
+
+
 
 #ajout des boutons
 first_button = Button(canvas, text="Démarrer", command=incremente)
-second_button = Button(canvas, text="réinitialiser")
-third_button = Button(canvas, text='Bleu', bg=couleurs[0])
-fourth_button = Button(canvas, text='Rouge', bg=couleurs[1])
-fifth_button = Button(canvas, text='Vert', bg=couleurs[2])
-sixth_button = Button(canvas, text='Jaune', bg=couleurs[3])
-seventh_button = Button(canvas, text='Rose', bg=couleurs[4])
-eighth_button = Button(canvas, text='Orange', bg=couleurs[5])
-ninth_button = Button(canvas, text='Blanc', bg=couleurs[6])
+second_button = Button(canvas, text="réinitialiser", command = réinitialiser)
+third_button = Button(canvas, text='Bleu', bg=couleurs[0], command= lambda : amelie(rd.choice(mots)))
+fourth_button = Button(canvas, text='Rouge', bg=couleurs[1], command = lambda: amelie(rd.choice(mots)))
+fifth_button = Button(canvas, text='Vert', bg=couleurs[2], command= lambda : amelie(rd.choice(mots)))
+sixth_button = Button(canvas, text='Jaune', bg=couleurs[3], command= lambda : amelie(rd.choice(mots)))
+seventh_button = Button(canvas, text='Rose', bg=couleurs[4], command= lambda : amelie(rd.choice(mots)))
+eighth_button = Button(canvas, text='Orange', bg=couleurs[5], command= lambda : amelie(rd.choice(mots)))
+ninth_button = Button(canvas, text='Blanc', bg=couleurs[6], command= lambda : amelie(rd.choice(mots)))
 
-onclick(third_button)
-    del label_title
+
 
 #Affichage
 label_text.pack()
