@@ -25,10 +25,11 @@ def réinitialiser():
 def incremente():
     """Fonction qui génère un compte à rebours de 30 secondes"""
     global compteur
-    compteur -=1
-    compteur_lbl['text'] = str(compteur)
-    if compteur > 0:
+   if compteur > 0 :
+        compteur -=1
+        compteur_lbl['text'] = str(compteur)
         canvas.after(1000, incremente)
+        return compteur 
 
 
 
