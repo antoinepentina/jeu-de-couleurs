@@ -28,5 +28,6 @@ label_text = tk.Label(canvas, text="Tapez la couleur des mots et pas le texte de
 label_score = tk.Label(canvas, text="Score : " + str(score), bg="azure2", font=("Cassia", 18))
 
 Ce code permet d'afficher plusieurs mots supplémentaires en plus de celui prévu initialement. 
+Il faut également élargir la page en remplaçant 300 par 600 ligne 56.
 
 
