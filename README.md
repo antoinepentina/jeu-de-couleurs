@@ -11,3 +11,22 @@ Si nous avons réussi, le compteur de score passe de 0 à 1 et ainsi de suite.
 Cliquer sur une case de couleur fait apparaître un autre mot et une autre couleur peu importe si la réponse est bonne ou fausse.
 Si jamais nous n'avons pas cliqué sur la bonne case, le compteur de score reste le même et un autre mot apparaît.
 Une fois le temps écoulé, la seule action possible est de réinitaliser le jeu.
+
+
+Nous avons essayé de passer au niveau 2. Simplement, par manque de temps, nous n'avons pas pu le finaliser. Nous vous mettons ci dessous le code à ajouter ligne 68 
+
+label_title = tk.Label(canvas, text=rd.choice(mots), font=("Cassia", 40), fg=rd.choice(couleurs), bg='azure2')
+label_title.pack()
+
+label_title1 = tk.Label(canvas, text=rd.choice(mots), font=("Cassia", 40), fg=rd.choice(couleurs), bg='azure2')
+label_title1.pack()
+
+label_title2 = tk.Label(canvas, text=rd.choice(mots), font=("Cassia", 40), fg=rd.choice(couleurs), bg='azure2')
+label_title2.pack()
+
+label_text = tk.Label(canvas, text="Tapez la couleur des mots et pas le texte des mots !", bg="azure2", font=("Cassia", 20))
+label_score = tk.Label(canvas, text="Score : " + str(score), bg="azure2", font=("Cassia", 18))
+
+Ce code permet d'afficher plusieurs mots supplémentaires en plus de celui prévu initialement. 
+
+
